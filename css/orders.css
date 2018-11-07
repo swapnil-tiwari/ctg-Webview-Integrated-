@@ -1,0 +1,72 @@
+.order-content{
+
+	width: 100%;
+	height: auto;
+	box-shadow: 1px 1px 1px 1px #ccc;
+}
+.orders{
+
+	width: 100%;
+}
+.order-list{
+
+	width: 100%;
+	padding: 10px;
+	background: #fff;
+
+}
+.upper-section{
+
+	padding: 10px;
+	box-shadow: 1px 1px 1px 1px #ccc;
+
+}
+.main-content,.lower-section{
+
+	padding-top: 5px;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+.billing-info,.delivery-info,.details-order{
+
+	padding: 20px;
+	padding-top: 50px;
+
+}
+.order-image{
+
+	padding: 20px;
+	text-align: center;
+}
+.item-image{
+
+	padding: 12px;
+	width:75%;
+	height: auto;
+}
+.right{
+
+	text-align: right;
+}
+.paragraph{
+
+	margin :0 !important;
+	padding: 5px;
+}
+@media only screen  and (max-width:480px){
+
+
+	.right{
+
+		text-align: left;
+	}
+	.mob-pad{
+		padding: 15px;
+	}
+
+}
+@media only screen  and (min-width:480px){
+
+	.item-image{
+		width: 60%;
+	}
+}

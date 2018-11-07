@@ -1,0 +1,35 @@
+.sup-name{
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-indent: 8;
+  width: 49%;
+  border-radius: 5px;
+}
+.supportform
+{
+  max-width: 60%;
+  margin: auto;
+  margin-top: 10px;
+}
+.frmcontent
+{
+
+  	padding: 20px;
+    box-shadow: 1px 1px 20px 1px #ddd;
+    background: #f5f5f5;
+}
+.description{
+
+	width: 98% ;
+	padding: 10px ;
+	text-indent: 8 ;
+	border-radius: 5px;
+	resize: none;
+}
+@media only screen and (max-width: 768px){
+
+  .supportform
+  {
+    max-width:unset;
+  }
+}

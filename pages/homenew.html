@@ -1,0 +1,121 @@
+
+			<div class="col-sm-7 animated slideInUp">
+			<div class="midcontent" style="background: #fff !important;">
+				<div class="row service cont1">
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="Development" onclick="myFunction(this)">
+                <i class="fa fa-laptop ficons"></i>
+								<br><br><p>Development</p>
+
+							</div>
+						</div>
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="Branding" onclick="myFunction(this)">
+                <i class="fa fa-paint-brush ficons"></i>
+								<br><br><p>Branding & Designing</p>
+
+							</div>
+						</div>
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont"  id="Digital" onclick="myFunction(this)">
+                <i class="fa fa-line-chart ficons"></i>
+								<br><br><p>SEO & Digital Marketing</p>
+
+							</div>
+						</div>
+
+				</div>
+				<div class="row service cont2">
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="Legal" onclick="myFunction(this)">
+                <i class="fa fa-gavel ficons"></i>
+								<br><br><p>Legal Services</p>
+							</div>
+						</div>
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="Email" onclick="myFunction(this)">
+                <i class="fa fa-envelope ficons"></i>
+								<br><br><p>Email & Chat Services</p>
+
+							</div>
+						</div>
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="sms" onclick="myFunction(this)">
+                <i class="fa fa-mobile-alt ficons"></i>
+								<br><br><p>SMS APIs</p>
+
+							</div>
+						</div>
+
+				</div>
+				<div class="row service cont3">
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="event" onclick="myFunction(this)">
+                <i class="fa fa-calendar-alt ficons"></i>
+								<br><br><p>Event Management</p>
+
+							</div>
+						</div>
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="Mentorship" onclick="myFunction(this)">
+                <i class="fa fa-user ficons"></i>
+								<br><br><p>Mentorship</p>
+
+							</div>
+						</div>
+						<div class="col-sm-4 servicecol">
+							<div class="searvicecont" id="Advertisement" onclick="myFunction(this)">
+                <i class="fa fa-bullhorn ficons"></i>
+								<br><br><p>Advertisement</p>
+
+							</div>
+						</div>
+
+				</div>
+			</div>
+      <!---   div after service click function   -->
+            <div class="serviceafter animated fadeIn" id="dev-target"></div>
+
+      <!--  End  div -->
+		</div>
+		<div class="col-sm-3"style="background:#fff;">
+			<div class="reqformcont animated zoomIn">
+				<h4 class="bold" id="startup_cap_post">Startup's Name</h4>
+				<h5>Post Your Requirement</h5>
+				<form action="" method="">
+
+					<textarea name="post_content" id='newdeal_description' class="txt-lg" placeholder="Enter Descriptive Details Of Your Requirement"></textarea>
+
+					<input type="text" name="budget" id='newdeal_price' class="txt-sml" placeholder="Price">
+
+					<input type="text" name="tags" class="txt-sml" placeholder="#tags">
+
+					<br><br>
+					<select id='newdeal_serviceType'>
+					  <option value="default">Others</option>
+					  <option value="##services#fa810f770634014405bf3b70dd892231">Development</option>
+					  <option value="##services#fa810f77063sdfsdfsd">Advertisement</option>
+					  <option value="##services#fa810f770634014405bf3b70dd892f70">Mentorship</option>
+					</select>
+					<br>
+
+					<input type="button" onclick="postDeal()" name="Submit" value="Post" class="submit-btn">
+				</form>
+		 </div>
+			<div class="services_suggestions animated zoomIn">
+				<center><h2>Recommendations</h2></center>
+				<ul class="menu_recom">
+					<li>Development</li>
+					<li>Branding and Design</li>
+					<li>SMS API</li>
+					<li>Event Management</li>
+					<li>Mentorship</li>
+				</ul>
+
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>
