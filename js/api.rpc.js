@@ -1,6 +1,7 @@
 var token = token || undefined;
 var allroutes = [];
 var all = {};
+var apipath='https://ctg-api.herokuapp.com/api'
 async function rpc(proc, arg) {
     var req = {
         method: 'POST',
@@ -13,7 +14,7 @@ async function rpc(proc, arg) {
             'content-type': 'application/json'
         },
     }
-    var resp = await fetch('http://localhost/api', req);
+    var resp = await fetch(apipath, req);
     var js = await resp.json();
     if (!js.ok) throw js;
     return js;

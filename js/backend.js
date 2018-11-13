@@ -61,7 +61,7 @@ document.write(JSON.stringify(res))
             debugger;
             var oldToken=token;
             token=undefined
-            var response= await api.gettoken.login({virtualID:username.value,password:password.value})
+            var response= await api.gettoken.login({virtualID:username.value,password:password.value});
             if (!response.ok)
             {
               token=oldToken;
@@ -79,9 +79,10 @@ document.write(JSON.stringify(res))
             }
 
         }
-        async function register_f()
+        async function register(type)
         {
-            var hash=window.location.hash="freelancer";
+          if(!type)throw "type is required"
+            token=undefined;
             window.api?null:window.api=await setAPI();
             // var res=await fetch('http://localhost:8080/data/register',
             // {
@@ -95,14 +96,13 @@ document.write(JSON.stringify(res))
               debugger;
                   var response=await api.gettoken.registerOrg({shortName:username_f.value,type:'freelancer',fullName:username_f.value,firstName:username_f.value,dateRegistered:Date.now(),password:pass_f.value,email:email_f.value,contact:contactno_f.value});
                   localStorage.setItem('ctg_token',response.data);
+                  token=response.data;
                   debugger;
                   if(response.ok==true)
                   {
-                     window.location.href = "../pages/finalizing-step-2.html";
+                    await loadForm('completereg'+type);
+                    func();
                   }
-
-
-
             } catch (e) {
                 window.alert("Invalid Details Entered");
 
@@ -161,17 +161,17 @@ document.write(JSON.stringify(res))
 
 
         }
-    async function logout()
-    {
-        window.api?null:window.api=await setAPI();
-        var response=await api.logout();
-        if(response.code==200)
-        {
-          document.location.reload();
-        }
+    // async function logout()
+    // {
+    //     window.api?null:window.api=await setAPI();
+    //     var response=await api.logout();
+    //     if(response.code==200)
+    //     {
+    //       document.location.reload();
+    //     }
 
 
-    }
+    // }
     // async function islogin()
     // {
     //     var res=await fetch('/data/islogin',
@@ -190,22 +190,21 @@ document.write(JSON.stringify(res))
     {
       return {communicationlanguage:comlanguage.value,skillslevel:skill,longDescription:description.value,github:github.value,linkedin:linkedin.value,work:work.value,registrationstatus:"completed"}
     }
-    async function updateData_f(type='freelancer')
+    async function updateData(type)
     {
+      if(!type)throw 'type is fiedls';
       window.api?null:window.api=await setAPI();
       try
       {
         if(type=='freelancer')
           var fields=scanFlFeidls();
-        else if(type=='sratup')
+        else if(type=='startup')
           var fields=scanFlFeidls()
-          
         var response=await api.org.updateOrg(fields);
         debugger;
         if (response.ok)
         {
-           window.location.href =window.location.origin
-
+           window.location.href ='/pages/home.html';
         }
 
       }
@@ -228,7 +227,6 @@ document.write(JSON.stringify(res))
            window.location.href =window.location.origin
 
         }
-
       }
       catch(e)
       {
@@ -236,3 +234,8 @@ document.write(JSON.stringify(res))
       }
 
     }
+function logout()
+{
+  localStorage.clear();
+  window.location='/pages/getting-started.html';
+}

@@ -18,7 +18,6 @@ async function func()
  typeof clientemail!='undefined'?clientemail.innerHTML=$$client.email:null;
  typeof clientinfo!='undefined'?clientinfo.innerHTML=$$client.description:null;
   typeof clienttype!='undefined'?clienttype.innerHTML=$$client.type:null;
-
-
 };
-func();
+if(localStorage.ctg_token)token=localStorage.ctg_token
+else if(window.location.search('getting-started.html')<0)window.location='/pages/getting-started.html'
