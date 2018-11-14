@@ -1,29 +1,30 @@
 <html>
+
 <head>
-	<title>Connect To Grow</title>
+  <title>Connect To Grow</title>
 
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="theme-color" content="#fff">
+  <meta name="theme-color" content="#fff">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json">
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/loader.css">
-    <link rel="stylesheet" type="text/css" href="../css/orders.css">
-		<link rel="stylesheet" type="text/css" href="../css/teamarea.css">
-		<link rel="stylesheet" type="text/css" href="../css/support.css">
-    <link rel="stylesheet" type="text/css" href="../css/profile.css">
-    <link rel="stylesheet" type="text/css" href="../css/animate.css">
-    <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon.png">
-		<script type="text/javascript" src="../js/backend.js"></script>
-		<script type="text/javascript" src="../js/api.rpc.js"></script>
-		<script>
-		async function apihandler(api)
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/loader.css">
+  <link rel="stylesheet" type="text/css" href="../css/orders.css">
+  <link rel="stylesheet" type="text/css" href="../css/teamarea.css">
+  <link rel="stylesheet" type="text/css" href="../css/support.css">
+  <link rel="stylesheet" type="text/css" href="../css/profile.css">
+  <link rel="stylesheet" type="text/css" href="../css/animate.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/favicon.png">
+  <script type="text/javascript" src="../js/backend.js"></script>
+  <script type="text/javascript" src="../js/api.rpc.js"></script>
+  <script>
+    async function apihandler(api)
 		{
 				if((await api.islogin()).data.login==false)
 					window.location.href = "/";
@@ -31,191 +32,228 @@
 		setAPI(apihandler);
 		</script>
 
-    <style type="text/css">
-      .defaultcont
-      {
-        /* background-image: url('../images/bg3.png');
+  <style type="text/css">
+    .defaultcont {
+      /* background-image: url('../images/bg3.png');
         background-size: cover; */
-        min-height: 100%;
-        min-height: 100% !important;
-      }
-      body{
-        background-image: url('../images/bg3.png');
-        background-size: cover;
-        background-position-y: 102%;
-      }
+      min-height: 100%;
+      min-height: 100% !important;
+    }
 
-    .brandname{
+    body {
+      background-image: url('../images/bg3.png');
+      background-size: cover;
+      background-position-y: 102%;
+    }
+
+    .brandname {
       font-family: calibri;
       float: left;
       line-height: 0.357 !important;
-			font-size: 25px;
+      font-size: 25px;
     }
-    </style>
+  </style>
 
-  </head>
+</head>
+
 <body class="animated fadeIn">
-	<nav class="navbar navbar-inverse header" >
-  <div class="container-fluid">
-    <div class="navbar-header">
-			<img src="../images/logo.png" class="logos">
-      <a class="navbar-brand" href="#homenew" style="color:#000;">Connect To Grow</a>
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="hamburger">
-        <span class="icon-bar" style="background:#000;"></span>
-        <span class="icon-bar"style="background:#000;"></span>
-        <span class="icon-bar"style="background:#000;"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse in" id="myNavbar">
-				<div class="profiledata" id="collapseconsole" style="margin-left:-15px;margin-right:-15px;">
-					<h2 id="startup_cap_dash_1">Startup Name</h2>
-					<ul class="menu">
-						<a href="#homenew"><li>Dashboard</li></a>
-						<a href="#profile"><li>Profile & Timeline</li></a>
-						<a href="#orders"><li>Orders</li></a>
-						<a href="#teamarea"><li>Team Area</li></a>
-						<a href="#support"><li>Support</li></a>
-						<a href="#" onclick="logout();"><li>Logout</li></a>
-					</ul>
-				</div>
+  <nav class="navbar navbar-inverse header">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img src="../images/logo.png" class="logos">
+        <a class="navbar-brand" href="#homenew" style="color:#000;">Connect To Grow</a>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" id="hamburger">
+          <span class="icon-bar" style="background:#000;"></span>
+          <span class="icon-bar" style="background:#000;"></span>
+          <span class="icon-bar" style="background:#000;"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse in" id="myNavbar">
+        <div class="profiledata" id="collapseconsole" style="margin-left:-15px;margin-right:-15px;">
+          <h2 id="startup_cap_dash_1">Startup Name</h2>
+          <ul class="menu">
+            <a href="#homenew">
+              <li>Dashboard</li>
+            </a>
+            <a href="#profile">
+              <li>Profile & Timeline</li>
+            </a>
+            <a href="#orders">
+              <li>Orders</li>
+            </a>
+            <a href="#teamarea">
+              <li>Team Area</li>
+            </a>
+            <a href="#support">
+              <li>Support</li>
+            </a>
+            <a href="#" onclick="logout();">
+              <li>Logout</li>
+            </a>
+          </ul>
+        </div>
 
-      <ul class="nav navbar-nav navbar-right" id="navlogout">
-        <li><a href="#" style="color:#000;" onclick="logout();"><span class="glyphicon glyphicon-log-in" style="color: #000;"></span> Logout</a></li>
-      </ul>
+        <ul class="nav navbar-nav navbar-right" id="navlogout">
+          <li><a href="#" style="color:#000;" onclick="logout();"><span class="glyphicon glyphicon-log-in" style="color: #000;"></span>
+              Logout</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  <div class="row maincont" id=mainRow>
+    <div class="col-sm-2 profile">
+      <div class="profiledata" id="mainconsole">
+        <h2 id="startup_cap_dash_2">Startup Name</h2>
+        <ul class="menu">
+          <a href="#homenew">
+            <li>Dashboard</li>
+          </a>
+          <a href="#profile">
+            <li>Profile & Timeline</li>
+          </a>
+          <a href="#orders">
+            <li>Orders</li>
+          </a>
+          <a href="#teamarea">
+            <li>Team Area</li>
+          </a>
+          <a href="#support">
+            <li>Support</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
   </div>
-</nav>
-	<div class="row maincont" id=mainRow>
-		<div class="col-sm-2 profile" >
-			<div class="profiledata" id="mainconsole">
-				<h2 id="startup_cap_dash_2">Startup Name</h2>
-				<ul class="menu">
-					<a href="#homenew"><li>Dashboard</li></a>
-					<a href="#profile"><li>Profile & Timeline</li></a>
-					<a href="#orders"><li>Orders</li></a>
-					<a href="#teamarea"><li>Team Area</li></a>
-					<a href="#support"><li>Support</li></a>
-				</ul>
-			</div>
-		</div>
+  <!-- Sections will come here -->
+</body>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+  crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1"
+  crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Passion+One|Prompt" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+<script src="../js/loader.js"></script>
+<script type="text/javascript" src="../js/fetchClient.js"></script>
+<script type="text/javascript">
+  var allModules = {};
+  const mainBox = document.getElementById('mainRow');
+  const sideBarHTML = mainBox.innerHTML;
+  async function getModule(fileName) {
+    if (allModules[fileName]) return allModules[fileName]
+    debugger;
+    var html = await fetch("/pages/" + fileName + '.html').then((d) => d.text());
+    allModules[fileName] = html;
+    return html;
+  }
+  async function showModule(html) {
+    mainBox.innerHTML = sideBarHTML + html;
+    func();
+    hamburger.click();
+  }
+  async function loadModule(fileName) {
+    showModule(loaderHTML)
+    showModule(await getModule(fileName));
+  }
+</script>
+<template id=loaderTemplate>
+  <div class="col-sm-10 defaultcont" style="">
+
+    <div id="loader">
+
+      <div class='body'>
+        <span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <div class='base'>
+          <span></span>
+          <div class='face'></div>
+        </div>
+      </div>
+      <div class='longfazers'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div id="l">
+        <h1>Redirecting</h1>
+      </div>
 
     </div>
-    <!-- Sections will come here -->
-  </body>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+</template>
+<script>
+  var loaderHTML = document.querySelector('#loaderTemplate').innerHTML;
+  showModule(loaderHTML);
+</script>
+<script>
+  function extractAndCallHashFunc(url) {
+    var fileName = url.split('#')[1];
+    loadModule(fileName);
 
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Passion+One|Prompt" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
-
-      <script  src="../js/loader.js"></script>
-      <script type="text/javascript" src="../js/fetchClient.js"></script>
-      <script type="text/javascript">
-            var allModules={};
-            const mainBox=document.getElementById('mainRow');
-            const sideBarHTML=mainBox.innerHTML;
-            async function getModule(fileName)
-            {
-                if(allModules[fileName])return allModules[fileName]
-                debugger;
-                var html=await fetch("/pages/"+fileName+'.html').then((d)=>d.text());
-                allModules[fileName]=html;
-                return html;
-            }
-            async function showModule(html) {
-                  mainBox.innerHTML=sideBarHTML+html;
-                  func();
-                  hamburger.click();
-            }
-            async function loadModule(fileName)
-            {
-                showModule(loaderHTML)
-                showModule(await getModule(fileName));
-            }
-      </script>
-      <template id=loaderTemplate ><div class="col-sm-10 defaultcont" style="">
-
-        <div id="loader">
-
-            <div class='body'>
-            <span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-            <div class='base'>
-              <span></span>
-              <div class='face'></div>
-            </div>
-            </div>
-            <div class='longfazers'>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            </div>
-            <div id="l">
-            <h1>Redirecting</h1>
-            </div>
-
-            </div>
-      </template>
-      <script>
-        var loaderHTML=document.querySelector('#loaderTemplate').innerHTML;
-        showModule(loaderHTML);
-      </script><script>
-      function extractAndCallHashFunc(url)
-      {
-        var fileName=url.split('#')[1];
-          loadModule(fileName);
-
+  }
+  window.onhashchange = (e) => extractAndCallHashFunc(e.newURL);
+  document.location.hash ? extractAndCallHashFunc(document.location.hash) : document.location.hash = 'homenew';
+</script>
+<script type="text/javascript">
+  async function myFunction(val) {
+    debugger
+    var serviceName = val.innerText.trim();
+    var deals = await api.deals.getDeal([], {
+      service: {
+        shortDescription: serviceName
       }
-      window.onhashchange=(e)=>extractAndCallHashFunc(e.newURL);
-      document.location.hash?extractAndCallHashFunc(document.location.hash):document.location.hash='homenew';
-      </script>
-      <script type="text/javascript">
-         async function myFunction(val){
-           debugger
-           var serviceName=val.innerText.trim();
-           var deals=await api.deals.getDeal([],{service:{shortDescription:serviceName}})
-              var posts= ``
-              for(let each of deals.data)
-              {
-                  posts+=`<div class="timeline"><div class="requests"><h1>${each.shortDescription}</h1><h5>By Startup Name</h5><hr><p>${each.longDescription}<br><p class="budget-display">5000</p></p><hr><button class="flag"><i class="fa fa-map-marker" aria-hidden="true"></i>Request</button><button class="money"><i class="fa fa-money" aria-hidden="true"></i>Apply</button><hr style="border: 2px solid #DBDBDB"></div></div>`
-              }
-      
-             var id="#"+val.id;
-             document.querySelector(id).parentNode.parentNode.parentNode.style.display="none";
-             var node = document.querySelector("#"+val.id).childNodes[5];
-             var html = node.innerHTML;
-   					var filtersecmob='<div class="filtersecmobparent" style="float:right;margin-bottom:10px;"><span><strong>Sort By:</strong></span><select class="filtercategory"><option value="relevance">Relevance</option><option value="popularity">Popularity</option><option value="price-lowtohigh">Price -- Low to High</option><option value="price-hightolow">Price -- High to Low</option><option value="newest">Newest</option></select></div>'
-   					var filtersec='<hr><ul class="filters"><strong>Sort By:</strong><li class="filteritem">Relevance</li><li class="filteritem">Popularity</li><li class="filteritem">Price -- Low to High</li><li class="filteritem">Price -- High to Low </li><li class="filteritem">Newest First</li></ul><hr style="border-color:#bfb9b9">'
-             document.getElementById("dev-target").style.display="block";
-             document.getElementById("dev-target").innerHTML='<div class="postsheader"><h2 style="display:inline">'+ html +'</h2><button class="goback" type="button" onclick="back(this)" id="return">Back</button>&nbsp;</div>'+filtersec+filtersecmob+'<div class="postsparent" style="overflow-y:scroll;height: calc(100% - 150px) !important;"> '+posts+'</div><div id="contain"></div>';
-   					$(".filteritem").click(function(){
-   						$(this).toggleClass("filteractive");
-   					});
+    })
+    var posts = ``
+    for (let each of deals.data) {
+      posts +=
+        `<div class="timeline"><div class="requests"><h1>${each.shortDescription}</h1><h5>By <code>${each.provider}</code></h5><hr><p>${each.longDescription}<br><p class="budget-display">${each.currency} ${each.price}</p></p><hr><button class="flag"><i class="fa fa-map-marker" aria-hidden="true"></i>Request</button><button class="money"><i class="fa fa-money" aria-hidden="true"></i>Apply</button><hr style="border: 2px solid #DBDBDB"></div></div>`
+    }
+    var id = "#" + val.id;
+    document.querySelector(id).parentNode.parentNode.parentNode.style.display = "none";
+    var node = document.querySelector("#" + val.id).childNodes[5];
+    var html = node.innerHTML;
+    var filtersecmob =
+      '<div class="filtersecmobparent" style="float:right;margin-bottom:10px;"><span><strong>Sort By:</strong></span><select class="filtercategory"><option value="relevance">Relevance</option><option value="popularity">Popularity</option><option value="price-lowtohigh">Price -- Low to High</option><option value="price-hightolow">Price -- High to Low</option><option value="newest">Newest</option></select></div>'
+    var filtersec =
+      '<hr><ul class="filters"><strong>Sort By:</strong><li class="filteritem">Relevance</li><li class="filteritem">Popularity</li><li class="filteritem">Price -- Low to High</li><li class="filteritem">Price -- High to Low </li><li class="filteritem">Newest First</li></ul><hr style="border-color:#bfb9b9">'
+    document.getElementById("dev-target").style.display = "block";
+    document.getElementById("dev-target").innerHTML = '<div class="postsheader"><h2 style="display:inline">' + html +
+      '</h2><button class="goback" type="button" onclick="back(this)" id="return">Back</button>&nbsp;</div>' +
+      filtersec + filtersecmob +
+      '<div class="postsparent" style="overflow-y:scroll;height: calc(100% - 150px) !important;"> ' + posts +
+      '</div><div id="contain"></div>';
+    $(".filteritem").click(function () {
+      $(this).toggleClass("filteractive");
+    });
 
-             }
-             function back(element){
-              document.getElementById("dev-target").style.display="none";
-              document.querySelector('.midcontent').style.display="block";
-             }
-       </script>
-			 <!--###################################### TeamAreaScript ############################################################-->
-			 <script type="text/javascript">
-			   var cards=`<div class="teamcards animated fadeIn">
+  }
+
+  function back(element) {
+    document.getElementById("dev-target").style.display = "none";
+    document.querySelector('.midcontent').style.display = "block";
+  }
+</script>
+<!--###################################### TeamAreaScript ############################################################-->
+<script type="text/javascript">
+  var cards =
+    `<div class="teamcards animated fadeIn">
 					 <div class="row cardsrow">
 						 <div class="col-sm-4" style="border-right: 1px solid #ccc;">
 							 <div style="text-align:center;min-height:35%;"><br><br><img src="../images/startup.png" style="width: 100px;height:auto;"></div>
@@ -232,25 +270,22 @@
 						 </div>
 					 </div>
 				 </div>`
-			   function addMember()
-			   {
-			     teamcardsparent.innerHTML+=cards;
-			   }
-				 function submitQuery()
-				 {
-					 if(supname.value==""||supemail.value==""||supcno.value==""||supquery.value=="")
-					 {
-						window.alert('Please fill the form correctly!');
-					 }
-					 else {
-						 document.getElementById("queryform").reset();
-						 window.alert('Your query has been submitted, we will contact you soon');
 
-					 }
+  function addMember() {
+    teamcardsparent.innerHTML += cards;
+  }
 
-				 }
+  function submitQuery() {
+    if (supname.value == "" || supemail.value == "" || supcno.value == "" || supquery.value == "") {
+      window.alert('Please fill the form correctly!');
+    } else {
+      document.getElementById("queryform").reset();
+      window.alert('Your query has been submitted, we will contact you soon');
 
+    }
 
-			 </script>
+  }
+</script>
 <script src="/js/deals.js"></script>
-  </html>
+
+</html>
