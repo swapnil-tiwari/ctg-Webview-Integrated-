@@ -24,12 +24,16 @@
   <script type="text/javascript" src="../js/backend.js"></script>
   <script type="text/javascript" src="../js/api.rpc.js"></script>
   <script>
-    async function apihandler(api)
-		{
-				if((await api.islogin()).data.login==false)
-					window.location.href = "/";
-		}
-		setAPI(apihandler);
+    // async function apihandler(api)
+		// {
+		// 		if((await api.islogin()).data.login==false)
+		// 			window.location.href = "/";
+		// }
+    // setAPI(apihandler);
+    if(typeof token=='undefined')
+    {
+      window.location.href = "/";
+    }
 		</script>
 
   <style type="text/css">
